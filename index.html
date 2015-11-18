@@ -1,12 +1,13 @@
 <html>
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <div id="container">
-            <div id="left-large">
-                <img src="img/skyline.jpg">
-                <p>HMT</p>
+        <div id="container" class="intro">
+            <div id="left-large" class="intro_bg bg1">
+                <div></div>
+                
             </div>
             <div id="right-container">
                 <div id="right-top">
@@ -17,42 +18,106 @@
                 </div>
             </div>
         </div>
+        <div id="main-text-container">
+            <p id="title">HMT</p>
+        </div>
+        
+        <script>
+            $(document).ready(function() {
+                $('.intro_bg').addClass('zout');
+                setTimeout(toggleZout, 7000);
+            });
+            function toggleZout() {
+                $('.intro_bg').css("transition", "all 3s ease-in"); 
+                $('.intro_bg').removeClass('zout');
+                setTimeout(switchFunction, 3000);
+            }
+            function startZout() {
+                $('.intro_bg').css("transition", "all 16s ease-in"); 
+                $('.intro_bg').addClass('zout');
+                setTimeout(toggleZout, 16000);
+            }
+            function switchFunction() {
+                if($('.intro_bg').hasClass('bg1')) {
+                    $('.intro_bg').removeClass('bg1');
+                    $('.intro_bg').addClass('bg2');
+                }
+                else if($('.intro_bg').hasClass('bg2')) { 
+                    $('.intro_bg').removeClass('bg2');
+                    $('.intro_bg').addClass('bg3');
+                }
+                else {
+                    $('.intro_bg').removeClass('bg3');
+                    $('.intro_bg').addClass('bg1');
+                }
+                
+                setTimeout(startZout,50);
+            }
+        </script>
         <style>
+            
             #container {
                 min-height: 300px;
                 height: 100vh;
+                z-index: 1;
+                position:relative;
                 width: 101.42%;
                 min-width: 1024px;
                 margin-top: -1.1vh;
+                overflow: hidden;
                 margin-left: -1%;
             }
             #left-large {
-                width: 80%;
+                width: 76%;
                 float:left;
                 height: inherit;
                 display: inline-block;
+                overflow: hidden;
             }
-            #left-large img {
+            .intro_bg {
                 width: 100%;
-                height: 100%;
+                height: inherit;
+                transform:scale(1);
+                transition:all 16s ease-in;       
             }
-            #left-large p {
+            .zout {
+                transform:scale(1.5); /* <--- change the scale of zoom out as appropriate */
+            }
+            .zout2 {
+                transform:scale(1); /* <--- change the scale of zoom out as appropriate */
+            }
+            .bg1 {
+                background:url(img/skyline.jpg)no-repeat center center;
+                background-size: cover !important;
+            }
+            .bg2 {
+                background:url(img/black-and-white-city-bird-people.jpg)no-repeat center center;
+                background-size: cover !important;
+            }
+            .bg3 {
+                background:url(img/highway.jpg)no-repeat center center;
+                background-size: cover !important;
+            }
+            p {
                 position: fixed;
                 z-index: 2;
                 font-family: 'Montserrat', sans-serif;
-                top: -1%;
+                top: -3%;
                 left: 1%;
                 font-size: 33px;
+                transform: scale(1);
                 color: white;
             }
             #right-container {
                 display: inline-block;
-                width: 19.93%;
+                width: 23.93%;
+                position: relative;
+                z-index:13;
                 float:right;
                 height: inherit;
             }
             #right-top {
-                height: 50%;
+                height: 70%;
                 border: 2px solid white;
                 border-top: 0px solid black;
             }
@@ -61,13 +126,14 @@
                 height: 100%;
             }
             #right-bottom {
-                height: 49.7%;
+                height: 29.7%;
                 border: 2px solid white;
             }
             #right-bottom img {
                 width: 100%;
                 height: 100%;
             }
+            
         </style>
     </body>
 </html>
