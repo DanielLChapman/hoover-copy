@@ -3,6 +3,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     </head>
     <body>
         <div id="container" class="intro">
@@ -14,10 +15,20 @@
             <div id="right-container">
                 <div id="right-top">
                     <img src="img/workshop.jpg">
+                    <div id="right-text-top-container">
+                        <h2>Family Looked After Family</h2>
+                        <p>Donald Trexler talks about workers looking out for each other on the job.</p>
+                        <h3>HEAR HIS STORY <i class="fa fa-angle-double-right"></i></h3>
+                    </div>
                 </div>
                 <div id="horizontal-spacer"></div>
                 <div id="right-bottom">
                     <img src="img/screws.jpg">
+                    <div id="right-text-bottom-container">
+                        <h2>Visit</h2>
+                        <p>Information about hte campus, device rentals, and free WiFi</p>
+                        <h3>LEARN MORE <i class="fa fa-angle-double-right"></i></h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -33,14 +44,15 @@
         
         <script>
             $(document).ready(function() {
-                $('.intro_bg').addClass('zout');
-                $("#horizontal-spacer").animate({
+                $("#horizontal-spacer").delay(500).animate({
                     width: '100%',
                     left : '0'
                 }, 2000);
-                setTimeout(verticalOut, 2000);
-                
-                setTimeout(toggleZout, 4000);
+                setTimeout(verticalOut, 2500);
+                $('#right-top').hide(0).delay(3000).fadeIn(300);
+                $('#right-bottom').hide(0).delay(3500).fadeIn(300);
+                $('.intro_bg').hide(0).show(0).delay(17000).addClass('zout');
+                setTimeout(toggleZout, 7000);
             });
             function verticalOut() {
                 $("#vertical-spacer").animate({
@@ -91,11 +103,16 @@
                 margin-left: -1%;
             }
             #left-large {
-                width: 69.89%;
+                width: 76.89%;
                 float:left;
                 height: inherit;
                 display: inline-block;
                 overflow: hidden;
+            }
+            @media screen and (max-width: 1331px) {
+                #left-large {
+                    width: 76.7%;
+                }
             }
             #vertical-spacer {
                 background: white;
@@ -105,6 +122,10 @@
                 width: 2px;
                 position: relative;
                 z-index: 20;
+            }
+            .intro {
+                transform:scale(1);
+                transition:all 1s ease-in;
             }
             .intro_bg {
                 width: 100%;
@@ -142,9 +163,9 @@
             }
             #right-container {
                 display: inline-block;
-                width: 29.96%;
+                width: 22.96%;
                 position: relative;
-                z-index:13;
+                z-index:19;
                 float:right;
                 height: inherit;
             }
@@ -160,6 +181,7 @@
                 position: absolute;
                 left: 99%;
                 z-index:20;
+                top: 65%;
             }
             #right-top img {
                 width: 100%;
@@ -243,6 +265,60 @@
                 font-style: normal;
                 letter-spacing: 2px;
             }
+            #right-text-top-container {
+                position: absolute;
+                z-index:21;
+                text-align: center;
+                top: 38%;
+                color: white;
+                display: block;
+                width: 80%;
+                letter-spacing: 0;
+                margin-left: 10%;
+                font-family: 'Montserrat', sans-serif;
+            }
+            #right-text-top-container p{
+                font-family: 'Open Sans', sans-serif;
+                font-style: italic;
+                font-weight: 300;
+                letter-spacing: 1px;
+                font-size: 12px;
+            }
+            #right-text-top-container i {
+                font-size: 22px;
+                color: rgb(192,159,47)
+            }
+            #right-text-bottom-container {
+                position: absolute;
+                z-index:21;
+                text-align: center;
+                top: 80%;
+                text-shadow: 0 0 3px #000;
+                color: white;
+                display: block;
+                width: 80%;
+                letter-spacing: 0;
+                margin-left: 10%;
+                font-family: 'Montserrat', sans-serif;
+            }
+            #right-text-bottom-container p{
+                font-family: 'Open Sans', sans-serif;
+                font-style: italic;
+                font-weight: 300;
+                letter-spacing: 1px;
+                font-size: 11px;
+            }
+            #right-text-bottom-container i {
+                font-size: 22px;
+                color: rgb(192,159,47)
+            }
+            #right-text-bottom-container h2 {
+                font-size: 18px;
+            }
+            #right-text-bottom-container h3 {
+                font-size: 18px;
+            }
+            
         </style>
     </body>
 </html>
