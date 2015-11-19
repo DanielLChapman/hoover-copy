@@ -2,6 +2,7 @@
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <div id="container" class="intro">
@@ -9,24 +10,44 @@
                 <div></div>
                 
             </div>
+            <div id="vertical-spacer"></div>
             <div id="right-container">
                 <div id="right-top">
                     <img src="img/workshop.jpg">
                 </div>
+                <div id="horizontal-spacer"></div>
                 <div id="right-bottom">
                     <img src="img/screws.jpg">
                 </div>
             </div>
         </div>
+        <p id="title">HMT</p>
         <div id="main-text-container">
-            <p id="title">HMT</p>
+            <p>Welcome to the</p>
+            <h2>HOOVER-MASON<br /> TESTLE</h2>
+            <div id="grey-bar"><span id="vertical-bar">|</span></div>
+            <br />
+            <h5>LEARN ABOUT THE HISTORY OF <span id="bold">BETHLEHEM STEEL</span></h5>
+            <div id="trestle"><h3><span id="bold" style="color: black;">Explore</span> the <span id="bold" style="color: black;">Trestle</span></h3></div>
         </div>
         
         <script>
             $(document).ready(function() {
                 $('.intro_bg').addClass('zout');
-                setTimeout(toggleZout, 7000);
+                $("#horizontal-spacer").animate({
+                    width: '100%',
+                    left : '0'
+                }, 2000);
+                setTimeout(verticalOut, 2000);
+                
+                setTimeout(toggleZout, 4000);
             });
+            function verticalOut() {
+                $("#vertical-spacer").animate({
+                    height: '100%',
+                    top : '0'
+                }, 1000);
+            }
             function toggleZout() {
                 $('.intro_bg').css("transition", "all 3s ease-in"); 
                 $('.intro_bg').removeClass('zout');
@@ -55,7 +76,9 @@
             }
         </script>
         <style>
-            
+            body {
+                background: rgb(46,46,46);
+            }
             #container {
                 min-height: 300px;
                 height: 100vh;
@@ -68,11 +91,20 @@
                 margin-left: -1%;
             }
             #left-large {
-                width: 76%;
+                width: 69.89%;
                 float:left;
                 height: inherit;
                 display: inline-block;
                 overflow: hidden;
+            }
+            #vertical-spacer {
+                background: white;
+                height: 0;
+                top: 65%;
+                float: left;
+                width: 2px;
+                position: relative;
+                z-index: 20;
             }
             .intro_bg {
                 width: 100%;
@@ -98,7 +130,7 @@
                 background:url(img/highway.jpg)no-repeat center center;
                 background-size: cover !important;
             }
-            p {
+            #title {
                 position: fixed;
                 z-index: 2;
                 font-family: 'Montserrat', sans-serif;
@@ -110,30 +142,107 @@
             }
             #right-container {
                 display: inline-block;
-                width: 23.93%;
+                width: 29.96%;
                 position: relative;
                 z-index:13;
                 float:right;
                 height: inherit;
             }
             #right-top {
-                height: 70%;
-                border: 2px solid white;
+                height: 65%;
                 border-top: 0px solid black;
+            }
+            #horizontal-spacer {
+                height: 2px;
+                background: white;
+                width: 1%;
+                float:right;
+                position: absolute;
+                left: 99%;
+                z-index:20;
             }
             #right-top img {
                 width: 100%;
                 height: 100%;
             }
             #right-bottom {
-                height: 29.7%;
-                border: 2px solid white;
+                height: 34.8%;
+                margin-top: 2px;
+                border-top: 0px solid white;
             }
             #right-bottom img {
                 width: 100%;
                 height: 100%;
             }
+            #main-text-container {
+                position: absolute;
+                top: 20%;
+                z-index: 3;
+                width: 74%;
+                text-align: center;
+            }
+            #main-text-container p {
+                font-style: italic;
+                font-size: 33px;
+                font-family: 'Open Sans', sans-serif;
+                color: rgb(192,159,47);
+            }
+            #main-text-container h2 {
+                font-size: 60px;
+                margin-top: -.2em;
+                font-family: 'Montserrat', sans-serif;
+                color: white;
+            }
+            #main-text-container h5 {
+                margin-top: 1.2em;
+                font-family: 'Open Sans', sans-serif;
+                color: white;
+                font-size: 14px;
+                letter-spacing: 2px;
+                font-style: italic;
+            }
+            #main-text-container h5 #bold{
+                margin-top: 1.2em;
+                font-family: 'Montserrat', sans-serif;
+                color: white;
+                font-size: 14px;
+                font-style: normal;
+                letter-spacing: 2px;
+            }
             
+            #grey-bar {
+                height: 1px;
+                width: 50%;
+                display: block;
+                margin: 0 auto;
+                color: gray;
+                border-bottom:1.5px solid grey;
+            }
+            #vertical-bar {
+                position: relative;
+                top: -20px;
+                font-size: 40px;
+            }
+            #trestle {
+                border:1px solid rgba(192,159,47, 0.0);
+                background-color: rgba(192,159,47, 0.8);
+                width: 380px;
+                margin: 0 auto;
+                height: 80px;
+            }
+            #trestle h3 {
+                font-family: 'Open Sans', sans-serif;
+                font-style: italic;
+                margin-top: 1.3em
+            }
+            #trestle h3 #bold{
+                font-family: 'Montserrat', sans-serif;
+                color: white;
+                font-size: 22px;
+                text-transform: uppercase;
+                font-style: normal;
+                letter-spacing: 2px;
+            }
         </style>
     </body>
 </html>
