@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    
+    <body id="signs-body">
+        <div id="container">
+            <nav>
+                <div id="nav-left-cont">
+                    <ul>
+                        <li><a href="index.html">HMT</a></li>
+                        <li><a href="index.html"><i class="fa fa-cogs"></i>TOUR</a></li>
+                        <li><a href="index.html"><i class="fa fa-list"></i>THEMES</a></li>
+                    </ul>
+                </div>
+                <div id="nav-right-cont"></div>
+            </nav>
+            <body-container>
+            </body-container>
+        </div>
+        <style>
+            #signs-body {
+                background: url(img/skyline-buildings.jpg) no-repeat center center;
+                background-size: cover;
+                
+            }
+            #signs-body a {
+                text-decoration: none;
+                color: white;
+            }
+            #signs-body nav {
+                background: rgb(46,46,46);
+                width: 100.3%;
+                height: 53px;
+                top: 0;
+                position: fixed;
+                box-shadow: 0 0 5px #000;
+            }
+            #nav-left-cont {
+                color: white;
+            }
+            #nav-left-cont ul {
+                list-style: none;
+                display: block;
+                margin-left: -35px;
+            }
+            #nav-left-cont li {
+                line-height: 53px;
+                font-size: 13px;
+                font-family: 'Open Sans', sans-serif;
+                text-align: center;
+                float: left;
+                width: 125px;
+                height: 100%;
+                margin-top: -17px;
+            }
+            #nav-left-cont li:active { 
+                background: black;
+                border-bottom: 3px solid yellow;
+            }
+            #nav-left-cont ul li:nth-child(1) {
+                width: 100px;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 18px;
+            }
+            .fa {
+                margin-right: 10px;
+                display: inline-block;
+                font-size: 18px;
+                
+            }
+        </style>
+    </body>
+</html>

@@ -3,7 +3,7 @@
             }
             #home #background-container {
                 height: 100vh;
-                min-height: 300px;
+                min-height: 558px;
                 position: absolute;
                 overflow: hidden;
                 width: 99.7%;
@@ -13,9 +13,9 @@
                 height: inherit;
                 width: inherit;
             }
-            #home #container {
-                min-height: 300px;
+            #container {
                 height: 100vh;
+                min-height: 558px;
                 z-index: 1;
                 position:relative;
                 width: 101.42%;
@@ -93,6 +93,7 @@
                 z-index:19;
                 float:right;
                 height: inherit;
+                min-height: 558px;
             }
             #home #right-top {
                 height: 65%;
@@ -177,6 +178,9 @@
                 margin: 0 auto;
                 height: 80px;
             }
+            #home #trestle:hover {
+                cursor:pointer;
+            }
             #home #trestle h3 {
                 font-family: 'Open Sans', sans-serif;
                 font-style: italic;
@@ -191,10 +195,10 @@
                 letter-spacing: 2px;
             }
             #home #right-text-top-container {
-                position: absolute;
+                position: relative;
                 z-index:21;
                 text-align: center;
-                top: 38%;
+                top: -200px;
                 color: white;
                 display: block;
                 width: 80%;
@@ -214,10 +218,10 @@
                 color: rgb(192,159,47)
             }
             #home #right-text-bottom-container {
-                position: absolute;
-                z-index:21;
+                position: relative;
+                z-index:22;
                 text-align: center;
-                top: 80%;
+                top: -150px;
                 text-shadow: 0 0 3px #000;
                 color: white;
                 display: block;
