@@ -1,6 +1,8 @@
             body {
                 background: rgb(46,46,46);
             }
+
+            /* Home Page */
             #home #background-container {
                 height: 100vh;
                 min-height: 558px;
@@ -56,6 +58,7 @@
                 transform:scale(1);
                 transition:all 16s ease-in;       
             }
+            /* Home Effect */
             #home .zout {
                 transform:scale(1.5); /* <--- change the scale of zoom out as appropriate */
             }
@@ -71,7 +74,8 @@
                 background:url(img/highway.jpg)no-repeat center center;
                 background-size: cover !important;
             }
-        
+            
+            /* Home Text */
             #home #title {
                 position: fixed;
                 z-index: 2;
@@ -141,7 +145,7 @@
                 font-family: 'Montserrat', sans-serif;
                 color: white;
             }
-            #home #main-text-container h5 {
+            h5 {
                 margin-top: 1.2em;
                 font-family: 'Open Sans', sans-serif;
                 color: white;
@@ -171,6 +175,7 @@
                 top: -20px;
                 font-size: 40px;
             }
+            /*Trestle Button */
             #home #trestle {
                 border:1px solid rgba(192,159,47, 0.0);
                 background-color: rgba(192,159,47, 0.8);
@@ -194,6 +199,7 @@
                 font-style: normal;
                 letter-spacing: 2px;
             }
+            /* Home Right Container */
             #home #right-text-top-container {
                 position: relative;
                 z-index:21;
@@ -247,3 +253,128 @@
             #home #right-text-bottom-container h3 {
                 font-size: 18px;
             }
+
+            /* Signs Map Page */
+            #signs-body #container {
+                background: url(img/abstract.jpg) no-repeat center center;
+                background-size: cover;
+                
+            }
+            #signs-body a {
+                text-decoration: none;
+                color: white;
+            }
+            #signs-body {
+                overflow: hidden;
+            }
+            #signs-body nav {
+                background: rgb(46,46,46);
+                width: 100%;
+                height: 53px;
+                top: 0;
+                margin-left: -10px;
+                z-index: 4;
+                position: fixed;
+                box-shadow: 0 0 5px #000;
+            }
+            #nav-left-cont {
+                color: white;
+            }
+            #nav-left-cont ul {
+                list-style: none;
+                display: block;
+                margin-left: -35px;
+            }
+            #nav-left-cont li {
+                line-height: 53px;
+                font-size: 13px;
+                letter-spacing: 1.5px;
+                font-family: 'Open Sans', sans-serif;
+                text-align: center;
+                float: left;
+                width: 125px;
+                height: 100%;
+                margin-top: -17px;
+            }
+            #signs-body #nav-left-cont li:nth-child(2){ 
+                background: black;
+                border-bottom: 3px solid rgba(192,159,47, 0.8);
+            }
+            #signs-body #nav-left-cont li:nth-child(2) i  {   
+                color: rgba(192,159,47, 0.8);
+            }
+            #nav-left-cont ul li:nth-child(1) {
+                width: 100px;
+                letter-spacing: -1px;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 17px;
+            }
+            #nav-right-cont {
+                color: white;
+                position: absolute;
+                right: 100px;
+                
+            }
+            #nav-right-cont ul {
+                list-style: none;
+                display: block;
+            }
+            #nav-right-cont li {
+                font-size: 13px;
+                font-family: 'Open Sans', sans-serif;
+                text-align: center;
+                float: left;
+                width: 48px;
+                height: 100%;
+                letter-spacing:2px;
+                margin-top: -17px;
+            }
+            #nav-right-cont li:nth-child(1) {
+                width: 100px;
+                border-right:1px solid white;
+            }
+            .fa {
+                margin-right: 10px;
+                display: inline-block;
+                font-size: 18px;  
+            }
+            #nav-right-cont .fa {
+                margin-right: 0;
+            }
+            .clear {
+                clear: both;
+            }
+            #signs-body h1 {
+                color: white;   
+                font-size: 55px;
+                font-family: 'Lato', sans-serif;
+                letter-spacing: 5px;
+                font-weight: 400;
+                text-shadow: 0 0 10px rgba(255,255,255,0.2);
+            }
+            #signs-body p {
+                color: rgba(255,255,255,0.8);
+                line-height: 2;
+                font-size:14px;
+                font-weight: 400;
+                font-family: 'Roboto Condensed', sans-serif;
+                
+            }
+            #p-signs-container {
+                width: 70%;
+                margin-left: 15%;
+            }
+            #signs-text-cont {
+                margin-left: 25%;
+                width:50%;
+                height: 300px;
+                margin-top: 25vh;
+                text-align: center;
+            }
+            @media screen and (max-width: 1000px) {
+                #signs-text-cont {
+                    margin-left: 0%;
+                    width: 100%;
+                }
+            }
+            /* Timeline */
